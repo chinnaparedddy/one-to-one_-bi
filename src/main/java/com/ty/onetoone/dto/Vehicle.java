@@ -16,8 +16,9 @@ public class Vehicle {
 	private String name;
 	private double cost;
 
-	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
-	@JoinColumn
+	//@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "vehical_id")
 	private Charcy charcy;
 
 	public int getId() {
